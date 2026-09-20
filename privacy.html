@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — ClipForge</title>
+<style>
+  :root{
+    --bg:#F4F5F8; --surface:#fff; --text:#16181F; --text-2:#454B5C; --muted:#6B7185;
+    --line:#DDE1EA; --accent:#0F6E7C;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#101218; --surface:#181B23; --text:#E7E9F0; --text-2:#BFC4D2;
+           --muted:#8B92A6; --line:#2A2F3C; --accent:#4BC4D4; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:720px;margin:0 auto;padding:56px 24px 80px}
+  h1{font-size:1.9rem;line-height:1.15;letter-spacing:-.03em;margin:0 0 6px}
+  h2{font-size:1.1rem;letter-spacing:-.015em;margin:34px 0 10px}
+  p{margin:0 0 14px;color:var(--text-2)}
+  ul{margin:0 0 14px;padding-left:20px;color:var(--text-2)}
+  li{margin-bottom:7px}
+  .date{color:var(--muted);font-size:.88rem;margin-bottom:26px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:10px;
+    padding:18px 20px;margin:20px 0}
+  .card p:last-child{margin-bottom:0}
+  table{border-collapse:collapse;width:100%;margin:0 0 14px;font-size:.92rem}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);
+    vertical-align:top;color:var(--text-2)}
+  th{color:var(--text);font-weight:600;font-size:.82rem;text-transform:uppercase;
+    letter-spacing:.06em}
+  .tw{overflow-x:auto}
+  a{color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+  nav{display:flex;gap:18px;padding-top:26px;margin-top:40px;border-top:1px solid var(--line)}
+  nav a{text-decoration:none;font-size:.9rem}
+  nav a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Política de Privacidade</h1>
+  <p class="date">ClipForge &middot; vigente desde 20 de setembro de 2026</p>
+
+  <p>O ClipForge é uma ferramenta pessoal de automação executada localmente no computador do seu operador. Esta política descreve quais dados a ferramenta acessa, como os armazena e por quanto tempo.</p>
+
+  <div class="card">
+    <p><strong>Não existe servidor.</strong> O ClipForge não hospeda serviço, não mantém banco de dados remoto e não transmite dados a terceiros. Tudo o que é descrito abaixo fica gravado apenas no computador do operador.</p>
+  </div>
+
+  <h2>1. Dados que a ferramenta acessa</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Dado</th><th>Origem</th><th>Para que serve</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Token de acesso e token de atualização do TikTok</td>
+        <td>TikTok, via autorização OAuth concedida pelo próprio operador</td>
+        <td>Autenticar as chamadas de publicação de vídeo</td>
+      </tr>
+      <tr>
+        <td>Identificador da conta (<code>open_id</code>) e nome de exibição</td>
+        <td>TikTok</td>
+        <td>Confirmar em qual conta a publicação será feita</td>
+      </tr>
+      <tr>
+        <td>Estado da publicação e identificador do vídeo publicado</td>
+        <td>TikTok</td>
+        <td>Registrar se o envio foi concluído e evitar envios duplicados</td>
+      </tr>
+      <tr>
+        <td>Metadados públicos de clipes (título, canal, visualizações, duração)</td>
+        <td>API oficial da Twitch</td>
+        <td>Selecionar quais clipes serão editados</td>
+      </tr>
+      <tr>
+        <td>Arquivos de vídeo e transcrições</td>
+        <td>Gerados localmente a partir dos clipes</td>
+        <td>Produzir o vídeo vertical legendado</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>2. Dados que a ferramenta NÃO acessa</h2>
+  <ul>
+    <li>Mensagens diretas, contatos, seguidores ou qualquer conteúdo privado da conta.</li>
+    <li>Dados de outras pessoas usuárias do TikTok.</li>
+    <li>Senhas. A autenticação é feita exclusivamente por OAuth; a ferramenta nunca recebe nem armazena a senha da conta.</li>
+    <li>Localização, dados de dispositivo ou identificadores de publicidade.</li>
+  </ul>
+
+  <h2>3. Onde os dados ficam</h2>
+  <p>Em arquivos no disco local do computador do operador. Os tokens de acesso ficam em um arquivo de credenciais separado, fora de qualquer repositório de código e não compartilhado.</p>
+
+  <h2>4. Compartilhamento</h2>
+  <p>Nenhum dado é vendido, cedido, sincronizado com nuvem ou compartilhado com terceiros. As únicas comunicações de rede que a ferramenta realiza são com a API oficial da Twitch, a API oficial do TikTok e, quando aplicável, o serviço de modelo de linguagem usado para redigir títulos e descrições — ao qual é enviado apenas o texto da transcrição do clipe, nunca dados de conta.</p>
+
+  <h2>5. Retenção</h2>
+  <ul>
+    <li><strong>Vídeos de origem:</strong> apagados automaticamente 7 dias após o processamento.</li>
+    <li><strong>Vídeos publicados e metadados:</strong> mantidos enquanto o operador desejar; removíveis a qualquer momento apagando as pastas locais.</li>
+    <li><strong>Tokens do TikTok:</strong> mantidos apenas enquanto a autorização estiver ativa. São apagados quando o operador revoga o acesso ou exclui o arquivo de credenciais.</li>
+  </ul>
+
+  <h2>6. Como revogar o acesso</h2>
+  <p>A qualquer momento, pelo aplicativo do TikTok, em <em>Configurações e privacidade → Segurança e permissões → Gerenciar permissões de aplicativos</em>. A revogação invalida os tokens imediatamente e a ferramenta deixa de conseguir publicar. Para eliminar os dados locais, basta apagar a pasta de instalação.</p>
+
+  <h2>7. Conteúdo de terceiros e atribuição</h2>
+  <p>Os clipes processados são conteúdo público de transmissões de terceiros, obtidos pela API oficial da Twitch. Toda publicação credita o canal de origem na imagem do vídeo e na descrição. Apenas canais que autorizam expressamente o uso de seus clipes são incluídos. Pedidos de remoção feitos pelo criador original são atendidos.</p>
+
+  <h2>8. Menores de idade</h2>
+  <p>A ferramenta não se destina a menores de 13 anos e não coleta dados de menores.</p>
+
+  <h2>9. Alterações</h2>
+  <p>Mudanças nesta política são publicadas nesta mesma página, com a data de vigência atualizada no topo.</p>
+
+  <h2>10. Contato</h2>
+  <p>Dúvidas sobre esta política ou pedidos relativos a dados: <strong>[PREENCHER: e-mail de contato]</strong></p>
+
+  <nav>
+    <a href="./index.html">Início</a>
+    <a href="./terms.html">Termos de Uso</a>
+  </nav>
+</div>
+</body>
+</html>

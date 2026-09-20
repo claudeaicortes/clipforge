@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClipForge</title>
+<style>
+  :root{
+    --bg:#F4F5F8; --surface:#fff; --text:#16181F; --text-2:#454B5C; --muted:#6B7185;
+    --line:#DDE1EA; --accent:#0F6E7C;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#101218; --surface:#181B23; --text:#E7E9F0; --text-2:#BFC4D2;
+           --muted:#8B92A6; --line:#2A2F3C; --accent:#4BC4D4; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:720px;margin:0 auto;padding:64px 24px 80px}
+  h1{font-size:2.2rem;line-height:1.1;letter-spacing:-.03em;margin:0 0 12px}
+  h2{font-size:1.15rem;letter-spacing:-.015em;margin:40px 0 10px}
+  p{margin:0 0 14px;color:var(--text-2)}
+  ul{margin:0 0 14px;padding-left:20px;color:var(--text-2)}
+  li{margin-bottom:6px}
+  .lede{font-size:1.1rem;color:var(--text-2)}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:10px;
+    padding:20px 22px;margin:24px 0}
+  .card p:last-child{margin-bottom:0}
+  nav{display:flex;gap:18px;padding-top:28px;margin-top:44px;border-top:1px solid var(--line)}
+  nav a{color:var(--accent);text-decoration:none;font-size:.9rem}
+  nav a:hover{text-decoration:underline}
+  nav a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+  footer{margin-top:20px;font-size:.82rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>ClipForge</h1>
+  <p class="lede">Ferramenta pessoal de automação que transforma clipes de transmissões ao vivo em vídeos curtos verticais e os publica no TikTok em nome do próprio dono da conta.</p>
+
+  <h2>O que faz</h2>
+  <ul>
+    <li>Busca clipes públicos da Twitch através da API oficial da Twitch.</li>
+    <li>Aplica filtros de conformidade: idioma, duração, popularidade, lista de canais autorizados e verificação de trechos com áudio silenciado por direitos autorais.</li>
+    <li>Transcreve o áudio localmente e gera legendas.</li>
+    <li>Reenquadra o vídeo para o formato vertical e queima as legendas.</li>
+    <li>Publica o resultado no TikTok, na conta do próprio operador da ferramenta, sempre com crédito ao criador original do clipe.</li>
+  </ul>
+
+  <div class="card">
+    <p><strong>Executa inteiramente no computador do operador.</strong> Não há servidor, não há serviço hospedado e não há banco de dados remoto. Todo processamento de vídeo, transcrição e armazenamento de credenciais acontece localmente.</p>
+  </div>
+
+  <h2>Quem usa</h2>
+  <p>A ferramenta é operada por uma única pessoa, sobre a própria conta do TikTok. Não é um serviço oferecido a terceiros e não processa dados de outros usuários.</p>
+
+  <h2>Atribuição</h2>
+  <p>Todo vídeo publicado identifica o canal de origem do clipe, tanto na imagem quanto na descrição da publicação. Apenas canais que autorizam expressamente o uso de seus clipes entram na lista de origens permitidas.</p>
+
+  <nav>
+    <a href="./privacy.html">Política de Privacidade</a>
+    <a href="./terms.html">Termos de Uso</a>
+  </nav>
+  <footer>ClipForge &middot; ferramenta pessoal, sem fins de distribuição a terceiros.</footer>
+</div>
+</body>
+</html>
