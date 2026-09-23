@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — ClipForge</title>
+<style>
+  :root{
+    --bg:#F4F5F8; --surface:#fff; --text:#16181F; --text-2:#454B5C; --muted:#6B7185;
+    --line:#DDE1EA; --accent:#0F6E7C;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#101218; --surface:#181B23; --text:#E7E9F0; --text-2:#BFC4D2;
+           --muted:#8B92A6; --line:#2A2F3C; --accent:#4BC4D4; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:720px;margin:0 auto;padding:28px 24px 80px}
+  .lang{display:flex;justify-content:flex-end;gap:10px;font-size:.82rem;margin-bottom:22px}
+  .lang a{color:var(--muted);text-decoration:none}
+  .lang a:hover{text-decoration:underline}
+  .lang .on{color:var(--text);font-weight:600}
+  h1{font-size:1.9rem;line-height:1.15;letter-spacing:-.03em;margin:0 0 6px}
+  h2{font-size:1.1rem;letter-spacing:-.015em;margin:34px 0 10px}
+  p{margin:0 0 14px;color:var(--text-2)}
+  ul{margin:0 0 14px;padding-left:20px;color:var(--text-2)}
+  li{margin-bottom:7px}
+  .date{color:var(--muted);font-size:.88rem;margin-bottom:26px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:10px;
+    padding:18px 20px;margin:20px 0}
+  .card p:last-child{margin-bottom:0}
+  table{border-collapse:collapse;width:100%;margin:0 0 14px;font-size:.92rem}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);
+    vertical-align:top;color:var(--text-2)}
+  th{color:var(--text);font-weight:600;font-size:.82rem;text-transform:uppercase;
+    letter-spacing:.06em}
+  .tw{overflow-x:auto}
+  a{color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+  nav{display:flex;gap:18px;padding-top:26px;margin-top:40px;border-top:1px solid var(--line)}
+  nav a{text-decoration:none;font-size:.9rem}
+  nav a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="lang"><a href="../privacy.html">Português</a><a class="on" href="./privacy.html">English</a></div>
+
+  <h1>Privacy Policy</h1>
+  <p class="date">ClipForge &middot; effective 20 September 2026</p>
+
+  <p>ClipForge is a personal automation tool that runs locally on its operator's computer. This policy describes which data the tool accesses, how it stores that data, and for how long.</p>
+
+  <div class="card">
+    <p><strong>There is no server.</strong> ClipForge does not host a service, does not maintain a remote database and does not transmit data to third parties. Everything described below is stored only on the operator's own computer.</p>
+  </div>
+
+  <h2>1. Data the tool accesses</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Data</th><th>Source</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>TikTok access token and refresh token</td>
+        <td>TikTok, via OAuth authorization granted by the operator</td>
+        <td>Authenticate video publishing requests</td>
+      </tr>
+      <tr>
+        <td>Account identifier (<code>open_id</code>) and display name</td>
+        <td>TikTok</td>
+        <td>Confirm which account the post will be made to</td>
+      </tr>
+      <tr>
+        <td>Publish status and published video identifier</td>
+        <td>TikTok</td>
+        <td>Record whether the upload completed and prevent duplicate posts</td>
+      </tr>
+      <tr>
+        <td>Public clip metadata (title, channel, view count, duration)</td>
+        <td>Official Twitch API</td>
+        <td>Select which clips will be edited</td>
+      </tr>
+      <tr>
+        <td>Video files and transcripts</td>
+        <td>Generated locally from the clips</td>
+        <td>Produce the captioned vertical video</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>2. Data the tool does NOT access</h2>
+  <ul>
+    <li>Direct messages, contacts, followers, or any private content of the account.</li>
+    <li>Data belonging to any other TikTok user.</li>
+    <li>Passwords. Authentication is performed exclusively through OAuth; the tool never receives or stores the account password.</li>
+    <li>Location, device data, or advertising identifiers.</li>
+  </ul>
+
+  <h2>3. Where the data is stored</h2>
+  <p>In files on the local disk of the operator's computer. Access tokens are kept in a separate credentials file, outside any code repository and never shared.</p>
+
+  <h2>4. Sharing</h2>
+  <p>No data is sold, transferred, synchronized to any cloud, or shared with third parties. The only network communications the tool performs are with the official Twitch API, the official TikTok API and, where applicable, the language-model service used to draft titles and descriptions — which receives only the text of the clip transcript, never account data.</p>
+
+  <h2>5. Retention</h2>
+  <ul>
+    <li><strong>Source videos:</strong> deleted automatically 7 days after processing.</li>
+    <li><strong>Published videos and metadata:</strong> kept for as long as the operator wishes; removable at any time by deleting the local folders.</li>
+    <li><strong>TikTok tokens:</strong> kept only while the authorization remains active. They are deleted when the operator revokes access or deletes the credentials file.</li>
+  </ul>
+
+  <h2>6. How to revoke access</h2>
+  <p>At any time, from the TikTok app, under <em>Settings and privacy → Security and permissions → Manage app permissions</em>. Revoking invalidates the tokens immediately and the tool can no longer publish. To erase the local data, delete the installation folder.</p>
+
+  <h2>7. Third-party content and attribution</h2>
+  <p>The clips processed are public content from third-party live streams, obtained through the official Twitch API. Every post credits the source channel on screen and in the description. Only channels that expressly authorize the use of their clips are included. Takedown requests from original creators are honored.</p>
+
+  <h2>8. Children</h2>
+  <p>The tool is not directed at children under 13 and does not collect data from children.</p>
+
+  <h2>9. Changes</h2>
+  <p>Changes to this policy are published on this same page, with the effective date updated at the top.</p>
+
+  <h2>10. Contact</h2>
+  <p>Questions about this policy, data requests, or content takedown requests: <a href="mailto:claudeaicortes@gmail.com">claudeaicortes@gmail.com</a></p>
+
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./terms.html">Terms of Service</a>
+  </nav>
+</div>
+</body>
+</html>

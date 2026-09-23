@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Service — ClipForge</title>
+<style>
+  :root{
+    --bg:#F4F5F8; --surface:#fff; --text:#16181F; --text-2:#454B5C; --muted:#6B7185;
+    --line:#DDE1EA; --accent:#0F6E7C;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#101218; --surface:#181B23; --text:#E7E9F0; --text-2:#BFC4D2;
+           --muted:#8B92A6; --line:#2A2F3C; --accent:#4BC4D4; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:720px;margin:0 auto;padding:28px 24px 80px}
+  .lang{display:flex;justify-content:flex-end;gap:10px;font-size:.82rem;margin-bottom:22px}
+  .lang a{color:var(--muted);text-decoration:none}
+  .lang a:hover{text-decoration:underline}
+  .lang .on{color:var(--text);font-weight:600}
+  h1{font-size:1.9rem;line-height:1.15;letter-spacing:-.03em;margin:0 0 6px}
+  h2{font-size:1.1rem;letter-spacing:-.015em;margin:34px 0 10px}
+  p{margin:0 0 14px;color:var(--text-2)}
+  ul{margin:0 0 14px;padding-left:20px;color:var(--text-2)}
+  li{margin-bottom:7px}
+  .date{color:var(--muted);font-size:.88rem;margin-bottom:26px}
+  a{color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+  nav{display:flex;gap:18px;padding-top:26px;margin-top:40px;border-top:1px solid var(--line)}
+  nav a{text-decoration:none;font-size:.9rem}
+  nav a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="lang"><a href="../terms.html">Português</a><a class="on" href="./terms.html">English</a></div>
+
+  <h1>Terms of Service</h1>
+  <p class="date">ClipForge &middot; effective 20 September 2026</p>
+
+  <h2>1. What it is</h2>
+  <p>ClipForge is a personal automation tool, executed locally, that selects public clips from live streams, converts them into captioned vertical short-form videos, and publishes them to TikTok on the operator's own account.</p>
+
+  <h2>2. Personal use</h2>
+  <p>The tool is operated by a single person on their own account. It is not offered as a service to third parties, has no user registration, and does not process any other person's account.</p>
+
+  <h2>3. Platform compliance</h2>
+  <p>Access to Twitch and TikTok data is performed exclusively through those platforms' official APIs, respecting their terms of service and rate limits. The tool does not scrape pages, does not circumvent technical limits, and does not automate those platforms' user interfaces.</p>
+
+  <h2>4. Content rights</h2>
+  <ul>
+    <li>The clips processed remain the property of their original creators and of the rights holders of the games shown.</li>
+    <li>Only channels that expressly authorize the use of their clips are part of the allow-list of sources.</li>
+    <li>Every post credits the source channel on screen and in the description.</li>
+    <li>Clips whose audio has been muted due to a copyright claim are discarded automatically, without processing.</li>
+  </ul>
+
+  <h2>5. Takedown requests</h2>
+  <p>Creators who wish their clips to no longer be used may request removal through the contact listed in the <a href="./privacy.html">Privacy Policy</a>. The channel is removed from the allow-list of sources and the corresponding posts are taken down.</p>
+
+  <h2>6. No warranty</h2>
+  <p>The tool is provided as is, without warranty of availability, results, or fitness for any particular purpose.</p>
+
+  <h2>7. Changes</h2>
+  <p>Changes to these terms are published on this same page, with the effective date updated at the top.</p>
+
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./privacy.html">Privacy Policy</a>
+  </nav>
+</div>
+</body>
+</html>

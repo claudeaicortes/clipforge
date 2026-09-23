@@ -13,10 +13,14 @@
     :root{ --bg:#101218; --surface:#181B23; --text:#E7E9F0; --text-2:#BFC4D2;
            --muted:#8B92A6; --line:#2A2F3C; --accent:#4BC4D4; }
   }
+  .lang{display:flex;justify-content:flex-end;gap:10px;font-size:.82rem;margin-bottom:22px}
+  .lang a{color:var(--muted);text-decoration:none}
+  .lang a:hover{text-decoration:underline}
+  .lang .on{color:var(--text);font-weight:600}
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--text);
     font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-  .wrap{max-width:720px;margin:0 auto;padding:56px 24px 80px}
+  .wrap{max-width:720px;margin:0 auto;padding:28px 24px 80px}
   h1{font-size:1.9rem;line-height:1.15;letter-spacing:-.03em;margin:0 0 6px}
   h2{font-size:1.1rem;letter-spacing:-.015em;margin:34px 0 10px}
   p{margin:0 0 14px;color:var(--text-2)}
@@ -32,6 +36,8 @@
 </head>
 <body>
 <div class="wrap">
+  <div class="lang"><a class="on" href="./terms.html">Português</a><a href="./en/terms.html">English</a></div>
+
   <h1>Termos de Uso</h1>
   <p class="date">ClipForge &middot; vigente desde 20 de setembro de 2026</p>
 
